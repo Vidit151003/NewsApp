@@ -84,11 +84,16 @@ class _LoginState extends State<Login> {
       itemBuilder: (context, index) {
         final article = articles[index];
         return ListTile(
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20),
+        ),),
+          selectedTileColor: Colors.yellow,
           onTap: () {
             _launchUrl(Uri.parse(article.url ?? ""));
           },
           leading: Image.network(
-            article.urlToImage ?? PLACEHOLDER_IMAGE_LINK,
+            article.urlToImage ?? 'No Image',
             height: 250,
             width: 100,
             fit: BoxFit.cover,

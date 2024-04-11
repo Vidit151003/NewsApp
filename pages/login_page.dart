@@ -198,10 +198,17 @@ class _LoginPageState extends State<LoginPage>
                             foregroundColor: Colors.black),
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,                    ),
+
                     SizedBox(
                       height: 50,
                       width: double.infinity,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.yellow,
+                          foregroundColor: Colors.black,
+                        ),
                         onPressed: () {
                           Navigator.pushReplacement(
                               context, MaterialPageRoute(builder: (context) => Login())
