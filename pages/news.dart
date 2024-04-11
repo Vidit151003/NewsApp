@@ -7,14 +7,14 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/article.dart';
 import '../consts.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class News extends StatefulWidget {
+  const News({Key? key}) : super(key: key);
 
   @override
-  _LoginState createState() => _LoginState();
+  _NewsState createState() => _NewsState();
 }
 
-class _LoginState extends State<Login> {
+class _NewsState extends State<News> {
   final Dio dio = Dio();
 
   List<Article> articles = [];
@@ -89,6 +89,7 @@ class _LoginState extends State<Login> {
         topRight: Radius.circular(20),
         ),),
           selectedTileColor: Colors.yellow,
+
           onTap: () {
             _launchUrl(Uri.parse(article.url ?? ""));
           },

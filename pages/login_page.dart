@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage>
         if (value == "Success") {
           Navigator.pop(context);
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => Login()));
+              context, MaterialPageRoute(builder: (context) => News()));
         } else {
           Navigator.pop(context);
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -199,7 +199,7 @@ class _LoginPageState extends State<LoginPage>
                       ),
                     ),
                     const SizedBox(
-                      height: 10,                    ),
+                      height: 11,                    ),
 
                     SizedBox(
                       height: 50,
@@ -211,7 +211,7 @@ class _LoginPageState extends State<LoginPage>
                         ),
                         onPressed: () {
                           Navigator.pushReplacement(
-                              context, MaterialPageRoute(builder: (context) => Login())
+                              context, MaterialPageRoute(builder: (context) => News())
                           );
                         }, child: Text("Continue without login", style: TextStyle(fontSize: 16),),
                       ),
